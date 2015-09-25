@@ -1,27 +1,21 @@
 .grid-container.centered
 	ul 
-		a.tab(ng-click="activeTab = 'Story'" ng-class="{'tabActive': activeTab === 'Story'}") Story
-		a.tab(ng-click="activeTab = 'Bundle'" ng-class="{'tabActive': activeTab === 'Bundle'}") Bundle
+		a.tab(ng-click="activeTab = 'Bundle'" ng-class="{'tabActive': activeTab === 'Bundle'}") Add URL
+		a.tab(ng-click="activeTab = 'Story'" ng-class="{'tabActive': activeTab === 'Story'}") Categories
+		
 		.switch-container_animation(ng-switch="activeTab")
 			//ADD STORY
-			.switch-content_animation(ng-switch-when="Story")
-				h4.text-center Add Story
-				form(method="post" ng-submit="storySubmit()" name="addStoryForm")
-					label Story
-						input(type="text", ng-model="$parent.storyTitle" placeholder="Enter story title" name="storyTitle" required)
-						.validation(ng-if="addStoryForm.storyTitle.$dirty" ng-messages="addStoryForm.storyTitle.$error")
-							.message(ng-message="required") Try again, a story title is required
-					label Description
-						input(type="text", ng-model="$parent.storyDescription" placeholder="Description" name= "storyDescription")
-
-					label Tags
-						tags-input(add-on-space="true" ng-model="storyTags" placeholder="Add a tag" name="storyTag")
-
-					button.button-auth.expand(type="submit" ng-disabled="addStoryForm.$invalid") Submit
+			.categories-filter(ng-switch-when="Story")
+				h4.text-center Categories
+				form
+					div(ng-repeat="tags in existingTags")
+						input(id="{{tags._id}}" type="checkbox")
+						label(for="{{tags._id}}") {{tags.text}}
+				button.button-auth.expand(type="submit" ng-click="filter()") Filter
 
 
 			//ADD BUNDLE
-			.switch-content_animation(ng-switch-when="Bundle")
+			.switch-content_animation(ng-switch-default)
 				h4.text-center Add Bundle
 				form(method="post" ng-submit="bundleSubmit()" name="addBundleForm")
 					label Title
@@ -34,6 +28,6 @@
 							.message(ng-message="required") We do need a url though
 
 					label Tags
-						tags-input(add-on-space="true" ng-model="tags" placeholder="Add a tag" name="bundleag")
+						tags-input(add-on-space="true" ng-model="$parent.tags" placeholder="Add a tag" name="bundleag")
 
 					button.button-auth.expand(type="submit" ng-disabled="addBundleForm.$invalid") Submit

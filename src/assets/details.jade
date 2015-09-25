@@ -2,7 +2,7 @@
 	div(masonry)
 		.masonry-brick(ng-repeat="bundle in bundles")
 			.card
-				img(ng-src="{{bundle.ogImg}}")
+				img(ng-src="{{bundle.ogImg}}" href="{{bundle.url}}")
 				.card-divider
 					{{bundle.userTitle}}
 					.card-section
@@ -20,22 +20,3 @@
 								i.fi-trash.size-30
 							a(href="#")
 								i.fi-widget.size-30
-
-
-
-
-
-//- .grid-block
-//- 	.card
-//- 		img(ng-src="{{bundle.image}}")
-//- 		.userCheck(ng-if="currentUser")
-//- 			.subscribe(ng-show="!isSubscribed()")
-//- 				a(href="#" ng-click="subscribe")
-//- 					i.fi-star.size-24
-//- 			.subscribe(ng-show="isSubscribed()")
-//- 				button(ng-click="unsubscribe()")
-//- 					i.fi-minus.size-24
-//- 			.currentUser(ng-show="!currentUser")
-//- 				a(ui-sref="/login") Login to Subscribe
-//- 		.card-divider
-//- 			{{bundle.tite}}

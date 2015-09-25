@@ -9,7 +9,7 @@ var Bundle = require('../model/mongoose.Bundle')
 router.get('/bundle', function (req, res, next) {
 	var query = Bundle.find();
 	if (req.query.tags) {
-		query.where({tags: req.query.tags})
+		query.where({tags: {$in: [req.query.tags]}})
 	} else {
 		query.limit(20);
 	}

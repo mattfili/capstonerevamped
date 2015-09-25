@@ -1,0 +1,33 @@
+#addForm {
+	display: inline;
+	position: absolute;
+	right: 0;
+	width: 20%;
+	margin-right: 20px;
+}
+
+#masonry {
+	display: inline;
+	position: absolute;
+	left: 0;
+	width: 80%;
+}
+
+.categories-filter {
+	form {
+		div {
+			width: 100%;
+			display: inline;
+
+			input {
+				display: inline;
+				width: 16px !important;
+				margin: 2px;
+			}
+
+			label {
+				display: inline;
+			}
+		}
+	}
+}

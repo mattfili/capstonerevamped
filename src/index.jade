@@ -9,6 +9,7 @@ html(lang='en-US' ng-app="capstone")
     link(rel='stylesheet', href='lib/build.css')
     link(rel="stylesheet" href="lib/foundation-icons/foundation-icons.css")
     link(rel='stylesheet', href='css/main.css')
+    link(href='https://fonts.googleapis.com/css?family=Lato:400,900,700,300|Noto+Serif:400,700italic,700' rel='stylesheet' type='text/css')
 
   body
     .menu-top(ng-controller="detailsCtrl")
@@ -16,7 +17,6 @@ html(lang='en-US' ng-app="capstone")
         .menu-group-left
           ul.dark.menu-bar
             li: a(ui-sref="start.dash") Home
-            li: a(ui-sref="add") Add
 
         .menu-group-right
           ul.dark.menu-bar

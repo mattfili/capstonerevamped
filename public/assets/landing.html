@@ -1,6 +1,7 @@
 
 <div class="vertical grid-block">
-  <li><a href="#" ng-click="openModal()" data-reveal-id="modal"><i class="fi-plus"></i></a></li>
+  <div id="panel" zf-panel="">x<a zf-close="" class="close-button"></a></div>
   <ui-view name="bDash"></ui-view>
-  <ui-view name="urlDetails"></ui-view>
+  <ui-view id="masonry" name="urlDetails"></ui-view>
+  <ui-view id="addForm" name="addform"></ui-view>
 </div>

@@ -2,7 +2,7 @@ angular.module('capstone', ['ui.router','foundation', 'foundation.common', 'ngAn
 
 .config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
 	$urlRouterProvider.when('', '/');
-	$urlRouterProvider.otherwise('/landing');
+	$urlRouterProvider.otherwise('/welcome');
 
 	$locationProvider.html5Mode(true);
 
@@ -22,15 +22,13 @@ angular.module('capstone', ['ui.router','foundation', 'foundation.common', 'ngAn
 	      },
 	      'urlDetails': {
 	        templateUrl: 'assets/details.html'
+	      }, 
+	      'addform': {
+	      	templateUrl: 'assets/addModal.html',
+	      	controller: 'addFormController',
+	      	controllerAs: 'addCtrl'
 	      }
 	    }
-	})
-
-	.state('add', {
-		url: '/add',
-		templateUrl: 'assets/addModal.html',
-	   	controller: 'addFormController',
-	    controllerAs: 'addCtrl'
 	})
 
 	.state('login', {
@@ -42,6 +40,13 @@ angular.module('capstone', ['ui.router','foundation', 'foundation.common', 'ngAn
 		url: '/signup',
 		templateUrl: 'assets/signup.html',
 		controller: 'signupCtrl'
+	})
+
+	.state('prelogin', {
+		url: '/welcome',
+		templateUrl: 'assets/prelogin.html',
+	   	controller: 'bDashController',
+	    controllerAs: 'bCtrl'
 	})
 
 

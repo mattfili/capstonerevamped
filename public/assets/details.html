@@ -2,7 +2,7 @@
 <div class="grid-content">
   <div masonry="masonry">
     <div ng-repeat="bundle in bundles" class="masonry-brick">
-      <div class="card"><img ng-src="{{bundle.ogImg}}"/>
+      <div class="card"><img ng-src="{{bundle.ogImg}}" href="{{bundle.url}}"/>
         <div class="card-divider">{{bundle.userTitle}}
           <div class="card-section">
             <h5>{{bundle.title}}</h5>

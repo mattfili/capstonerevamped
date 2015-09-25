@@ -7,4 +7,19 @@
 	border-bottom: 3px solid black;
 }
 
+form {
+	input {
+		width: 100% !important;
+		min-width: 225px;
+
+	}
+
+	li {
+		.tag-item {
+			width: 100% !important;
+		}
+	}
+	
+}
+
 

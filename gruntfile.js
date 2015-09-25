@@ -53,6 +53,7 @@ module.exports = function(grunt) {
             cwd: 'src/',
             src: [
               '**',
+              '**/*.jpg',
               '!**/*.jade',
               '!**/*.scss',
               '!**/*.css',

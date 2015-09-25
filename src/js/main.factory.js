@@ -79,6 +79,10 @@ angular.module('capstone')
 				return $resource('/api/bundle')
 			},
 
+			getTags: function() {
+				return $resource('/api/tag')
+			},
+
 
 			deleteOne: function() {
 				return $resource('/api/bundle/:id', {id: '@id'})

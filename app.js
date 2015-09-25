@@ -16,7 +16,7 @@ var app = express();
 var userAuthentication = require('./routes/users')
 var bundle = require('./routes/bundle')
 var scraper = require('./routes/scraper')
-var story = require('./routes/story')
+var tag = require('./routes/tag')
 
 
 //DB CONFIG
@@ -37,13 +37,22 @@ app.use(session({ secret: 'keyboard cat' }));
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'bower_components/foundation-apps/js/angular')));
+app.use(express.static(path.join(__dirname, 'bower_components/foundation-icons')));
+
+
+function isAuthenticated (req, res, next) {
+  if (req.user)
+    return next();
+  res.sendfile(__dirname + '/public/assets/prelogin.html')
+}
 
 
 app.use(function(req, res, next) {
   if (req.user) {
     res.cookie('user', JSON.stringify(req.user));
   }
-  next();
+    next();
 });
 
 
@@ -51,7 +60,7 @@ app.use(function(req, res, next) {
 app.use('/api', userAuthentication)
 app.use('/api', scraper)
 app.use('/api', bundle)
-app.use('/api', story)
+app.use('/api', tag)
 
 
 // POST LOGIN ENDPOINTS

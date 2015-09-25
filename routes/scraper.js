@@ -11,6 +11,7 @@ var ObjectID = require('mongodb').ObjectID
 
 // REQUIRES
 var Bundle = require('../model/mongoose.Bundle')
+var Tag = require('../model/mongoose.tags')
 
 router.post('/bundle', function (req, res, next) {
 
@@ -83,6 +84,19 @@ router.post('/bundle', function (req, res, next) {
 			_.forEach(formTags, function(tag) {
 				bundle.tags.push(tag.text)
 			})
+
+			Tag.collection.insert(formTags, onInsert)
+
+			function onInsert(err, docs) {
+				if (err) {
+					console.log(err)
+				} else {
+					console.info('%d were successfully stored', docs.length)
+				}
+			}
+
+
+		
 
 			callback(error, bundle)
 
