@@ -3,7 +3,8 @@ var path = require('path');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var bcrypt = require('bcryptjs')
+var bcrypt = require('bcryptjs');
+var cookie = require('cookie');
 var session = require('express-session');
 var request = require('request');
 var passport = require('passport');
@@ -11,7 +12,6 @@ var LocalStrategy = require('passport-local').Strategy;
 var app = express();
 
 
-  
 // ROUTE REQUIRES
 var userAuthentication = require('./routes/users')
 var bundle = require('./routes/bundle')
@@ -37,8 +37,10 @@ app.use(session({ secret: 'keyboard cat' }));
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'node_modules')));
 app.use(express.static(path.join(__dirname, 'bower_components/foundation-apps/js/angular')));
 app.use(express.static(path.join(__dirname, 'bower_components/foundation-icons')));
+
 
 
 function isAuthenticated (req, res, next) {
