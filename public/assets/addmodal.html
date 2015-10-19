@@ -1,30 +1,30 @@
 
 <div class="grid-container centered">
-  <ul> <a ng-click="activeTab = 'Bundle'" ng-class="{'tabActive': activeTab === 'Bundle'}" class="tab">Add URL</a><a ng-click="activeTab = 'Story'" ng-class="{'tabActive': activeTab === 'Story'}" class="tab">Categories</a>
+  <ul> <a ng-click="activeTab = 'Bundle'" ng-class="{'tabActive': activeTab === 'Bundle'}" class="tab">Add URL</a><a ng-click="activeTab = 'Category'" ng-class="{'tabActive': activeTab === 'Category'}" class="tab">Categories</a>
     <div ng-switch="activeTab" class="switch-container_animation">
-      <!--ADD STORY-->
-      <div ng-switch-when="Story" class="categories-filter">
+      <!--Categories-->
+      <div ng-switch-when="Category" class="categories-filter">
         <h4 class="text-center">Categories</h4>
         <form>
           <div ng-repeat="tags in existingTags">
-            <input id="{{tags._id}}" type="checkbox"/>
             <label for="{{tags._id}}">{{tags.text}}</label>
+            <input id="{{tags._id}}" ng-true-value="'{{tags.text}}'" type="checkbox" ng-model="addForm.{{text}}"/>
           </div>
         </form>
-        <button type="submit" ng-click="filter()" class="button-auth expand">Filter</button>
+        <button type="submit" ng-click="filter(tags.text)" class="button-auth expand">Filter</button>
       </div>
       <!--ADD BUNDLE-->
       <div ng-switch-default="ng-switch-default" class="switch-content_animation">
-        <h4 class="text-center">Add Bundle</h4>
+        <h4 class="text-center">Scrape URL</h4>
         <form method="post" ng-submit="bundleSubmit()" name="addBundleForm">
           <label>Title
-            <input type="text" ng-model="$parent.title" placeholder="Enter bundle title" name="title" required="required"/>
+            <input type="text" ng-model="$parent.title" placeholder="Enter your title" name="title" required="required"/>
             <div ng-if="loginForm.title.$dirty" ng-messages="loginForm.title.$error" class="validation">
               <div ng-message="required" class="message">Try again, a title is required</div>
             </div>
           </label>
           <label>URL
-            <input type="url" ng-model="$parent.url" placeholder="URL" name="url" required="required"/>
+            <input type="url" ng-model="$parent.url" placeholder="Enter page URL" name="url" required="required"/>
             <div ng-if="loginForm.url.$dirty" ng-messages="loginForm.url.$error" class="validation">
               <div ng-message="required" class="message">We do need a url though</div>
             </div>

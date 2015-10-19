@@ -1,35 +1,87 @@
-#welcomebg {
-	background: linear-gradient(
-      rgba(0, 0, 0, 0.6),
-      rgba(0, 0, 0, 0.6)
-    ), url(../images/titleImage.jpg) no-repeat center;
+.welcome-img-container {
 	width: 100%;
-	max-height: 500px;
-	position: relative;
-	z-index: 0;
+	height: auto;
+	overflow: hidden;
+	
+	.welcomebg {
+		background: linear-gradient(
+	      rgba(0, 0, 0, 0.6),
+	      rgba(0, 0, 0, 0.6)
+	    ), url(../images/titleImage.jpg) no-repeat center center fixed;
+	    background-size: cover;
+	    width: 100%;
+	    height: 600px;
+
+		.welcome-text {
+			position: absolute;
+			background: linear-gradient(
+	      		rgba(1, 1, 1, 0.2),
+	      		rgba(1, 1, 1, 0.2)
+	    	);
+			left: 10%;
+			top: 15%;
+			text-align: left;
+			height: 200px;
+			width: 900px;
+			padding: 10px;
+			z-index: 1;
+
+			h3 {
+				font-family: 'Lato';
+				font-weight: 900;
+				color: white;
+				margin: 0;
+				padding-bottom: 10px;
+				font-size: 45px;
+			}
+
+			h5 {
+				font-family: 'Lato';
+				font-weight: 600;
+				color: white;
+				font-size: 25px;
+				padding-bottom: 10px;
+			}
+		}
+
+	}
 }
 
-.welcome-text {
-	position: absolute;
-	text-align: left;
-	height: 400px;
-	width: 600px;
-	z-index: 5;
+.welcome-content {
+	padding-left: 10px;
 
-	h3 {
-		font-family: 'Lato' sans-serif;
-		font-weight: 900;
-		color: white;
-		margin: 0;
-		padding: 10px;
-		z-index: 10;
-		position: absolute;
-	}
+		h4 {
+			font-family: 'Lato';
+			font-weight: 600;
+			color: black;
+			font-size: 30px;
+		}
+	
 
-	h5 {
-		font-family: 'Lato' serif;
-		font-weight: 600;
-		z-index: 10;
-		position: absolute;
-	}
+		h5 {
+			font-family: 'Lato';
+			font-weight: 600;
+			color: black;
+			padding-bottom: 10px;
+		}
+
+		li {
+		margin-bottom: 10px;
+
+			i {
+			padding-top: 10px;
+			font-size: 50px !important;
+			color: #229BFA;
+			display: block-inline;
+			clear: right;
+			padding-right: 10px;
+
+
+				h5 {
+					display: inline;
+					font-weight: 800;
+				}
+			}
+		}
+
 }

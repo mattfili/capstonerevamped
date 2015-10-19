@@ -16,7 +16,8 @@ html(lang='en-US' ng-app="capstone")
       .menu-group.dark
         .menu-group-left
           ul.dark.menu-bar
-            li: a(ui-sref="start.dash") Home
+            li(ng-if="!currentUser"): a(ui-sref="prelogin")  ::BetterBookmarks
+            li(ng-if="currentUser"): a(ui-sref="start.dash") ::BetterBookmarks
 
         .menu-group-right
           ul.dark.menu-bar

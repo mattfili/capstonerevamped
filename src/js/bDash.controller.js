@@ -19,9 +19,10 @@ angular.module('capstone')
 		})
 	}
 
+
 })
 
-.controller('addFormController', function (Bundles, $scope, Add) {
+.controller('addFormController', function (Bundles, $scope) {
 	$scope.activeTab = 'Story'
 
 	$scope.bundleSubmit = function() {
@@ -51,6 +52,10 @@ angular.module('capstone')
 				$scope.storyTags = null
 				$scope.storyDescription = null
 			})
+	}
+
+	$scope.filter = function (tags) {
+		console.log(tags);
 	}
 
 })

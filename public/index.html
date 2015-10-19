@@ -15,7 +15,8 @@
       <div class="menu-group dark">
         <div class="menu-group-left">
           <ul class="dark menu-bar">
-            <li><a ui-sref="start.dash">Home</a></li>
+            <li ng-if="!currentUser"><a ui-sref="prelogin"> ::BetterBookmarks</a></li>
+            <li ng-if="currentUser"><a ui-sref="start.dash">::BetterBookmarks</a></li>
           </ul>
         </div>
         <div class="menu-group-right">
