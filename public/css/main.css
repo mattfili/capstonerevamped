@@ -235,7 +235,8 @@ select {
  *    `input` and others.
  */
 button,
-html input[type="button"], input[type="reset"],
+html input[type="button"],
+input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button;
   /* 2 */
@@ -511,11 +512,9 @@ a, [ui-sref], [zf-open], [zf-close], [zf-toggle] {
   box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.25);
   bottom: 0;
   -webkit-transform: translateY(100%);
-      -ms-transform: translateY(100%);
           transform: translateY(100%); }
   .action-sheet.is-active {
     -webkit-transform: translateY(0%);
-        -ms-transform: translateY(0%);
             transform: translateY(0%); }
   .action-sheet ul {
     margin: -1rem;
@@ -570,7 +569,6 @@ a, [ui-sref], [zf-open], [zf-close], [zf-toggle] {
       top: auto;
       bottom: 0;
       -webkit-transform: translateX(-50%) translateY(110%);
-          -ms-transform: translateX(-50%) translateY(110%);
               transform: translateX(-50%) translateY(110%); }
       .action-sheet.is-active {
         opacity: 1;
@@ -587,7 +585,6 @@ a, [ui-sref], [zf-open], [zf-close], [zf-toggle] {
         margin-left: -10px; }
       .action-sheet.is-active {
         -webkit-transform: translateX(-50%) translateY(100%);
-            -ms-transform: translateX(-50%) translateY(100%);
                 transform: translateX(-50%) translateY(100%); }
       .action-sheet::before, .action-sheet::after {
         top: -10px;
@@ -623,7 +620,6 @@ a, [ui-sref], [zf-open], [zf-close], [zf-toggle] {
         top: 0;
         bottom: auto;
         -webkit-transform: translateX(-50%) translateY(-120%);
-            -ms-transform: translateX(-50%) translateY(-120%);
                 transform: translateX(-50%) translateY(-120%); }
         .action-sheet.top.is-active {
           opacity: 1;
@@ -640,7 +636,6 @@ a, [ui-sref], [zf-open], [zf-close], [zf-toggle] {
           margin-left: -10px; }
         .action-sheet.top.is-active {
           -webkit-transform: translateX(-50%) translateY(-110%);
-              -ms-transform: translateX(-50%) translateY(-110%);
                   transform: translateX(-50%) translateY(-110%); }
         .action-sheet.top::before, .action-sheet.top::after {
           top: auto;
@@ -830,7 +825,7 @@ a, [ui-sref], [zf-open], [zf-close], [zf-toggle] {
       float: right;
       pointer-events: none;
       margin-top: -0.25em; }
-      @media screen and (min-width: 0 \0) {
+      @media screen and (min-width: 0\0) {
         .block-list li > input[type="checkbox"]:checked + label::before, .block-list li > input[type="radio"]:checked + label::before {
           background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAdlJREFUeNrMl0FugzAQRY3TRZeoFyhVL0BOkGTXJezaHZwguUnECaCrdFd6gqQnCN11Uyk5QekNOlONJWMVGMCgfGlkEIY3HnsG2xFM3d96PjQB2AJsWdPtAPYOln+dTwXnuw4DHEGzBvNFN6EDCTiS9XIAwB40acNoucKoxODIie0AwAOCu8KOSnIiNx/MakK+A7sW9oTferxx3fP3T1nURoBG/irGVahHwjHm/Ggx7E3TMVdrQmoP0gngghhpZQ3QvG/EdPLUelARWI8Aycjq9Md0qMIdbcNhjmOKLoY7quk3l1Rebeqg4AwFkmq7LWGOh1pmNY0etZAWSq0OX8HoS4JvWuCopbSY26EGR/CW86K0BF+pwkLwlPuyHJhOCl5oe4ZtF++vOqST+GdOYwO+71pN2VNAjmQGPCe42weuHDg0PI8olUwnYrXTGQJH9gxq8l1LKvrQx4O6/YY32Kp/ugb3ey7gZ4xAzuhYiYTxB/UHZFAuaREVXZ2g6yFlvEC2yoKEmbsRZYNgVLk2JeaOaG+xLHN+WCszDWMqLGOrJFa1DlApjSdwoHJGqGzLIb0+cas0wh5Bh780ngswx8GJD7h8sHg2wLA/mfDLPZpdxOF0quP5rwADAAFIzSRvu1m5AAAAAElFTkSuQmCC"); } }
   .block-list .with-dropdown {
@@ -853,7 +848,6 @@ a, [ui-sref], [zf-open], [zf-close], [zf-toggle] {
     top: 50%;
     right: 1rem;
     -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
             transform: translateY(-50%); }
   .block-list.with-icons li > a, .block-list.with-icons li > span, .block-list.with-icons li > label {
     padding-left: 2.8rem; }
@@ -908,7 +902,6 @@ a, [ui-sref], [zf-open], [zf-close], [zf-toggle] {
       right: 1rem;
       top: 50%;
       -webkit-transform: translateY(-50%);
-          -ms-transform: translateY(-50%);
               transform: translateY(-50%);
       font-weight: bold;
       color: #666666;
@@ -1089,9 +1082,9 @@ a, [ui-sref], [zf-open], [zf-close], [zf-toggle] {
       background: transparent;
       color: #f1f1f1; }
       .button.hollow.secondary:hover, .button.hollow.secondary:focus {
-        border-color: #f4f4f4;
+        border-color: whitesmoke;
         background: transparent;
-        color: #f4f4f4; }
+        color: whitesmoke; }
       .button.hollow.secondary .iconic * {
         fill: #f1f1f1;
         stroke: #f1f1f1; }
@@ -1099,11 +1092,11 @@ a, [ui-sref], [zf-open], [zf-close], [zf-toggle] {
           fill: #f1f1f1;
           stroke: #f1f1f1; }
       .button.hollow.secondary:hover .iconic * {
-        fill: #f4f4f4;
-        stroke: #f4f4f4; }
+        fill: whitesmoke;
+        stroke: whitesmoke; }
         .button.hollow.secondary:hover .iconic *.iconic-property-accent {
-          fill: #f4f4f4;
-          stroke: #f4f4f4; }
+          fill: whitesmoke;
+          stroke: whitesmoke; }
     .button.hollow.success {
       border: 1px solid #43AC6A;
       background: transparent;
@@ -1361,7 +1354,7 @@ a, [ui-sref], [zf-open], [zf-close], [zf-toggle] {
       background: #39925a;
       color: #fff; }
     .button-group > li.success > a:hover, .button-group > li.success > a:focus, .button-group > li.success > label:hover, .button-group > li.success > label:focus, .button-group > li.success > button:hover, .button-group > li.success > button:focus {
-      border-color: #32814f; }
+      border-color: #328150; }
     .button-group > li.success > a .iconic *, .button-group > li.success > label .iconic *, .button-group > li.success > button .iconic * {
       fill: #fff;
       stroke: #fff; }
@@ -1412,9 +1405,9 @@ a, [ui-sref], [zf-open], [zf-close], [zf-toggle] {
         .button-group.segmented > li > a .iconic *.iconic-property-accent, .button-group.segmented > li > label .iconic *.iconic-property-accent, .button-group.segmented > li > button .iconic *.iconic-property-accent {
           fill: #00558b;
           stroke: #00558b; }
-    .button-group.segmented > li.is-active > a,
-    .button-group.segmented > li.is-active > a:hover,
-    .button-group.segmented > li > input:checked + label, .button-group.segmented > li > input:checked + label:hover {
+    .button-group.segmented > li.is-active > a, .button-group.segmented > li.is-active > a:hover,
+    .button-group.segmented > li > input:checked + label,
+    .button-group.segmented > li > input:checked + label:hover {
       background: #00558b;
       color: #fff; }
     .button-group.segmented > li.is-active > a .iconic *,
@@ -1439,9 +1432,9 @@ a, [ui-sref], [zf-open], [zf-close], [zf-toggle] {
           .button-group.segmented.secondary > li > a .iconic *.iconic-property-accent, .button-group.segmented.secondary > li > label .iconic *.iconic-property-accent, .button-group.segmented.secondary > li > button .iconic *.iconic-property-accent {
             fill: #f1f1f1;
             stroke: #f1f1f1; }
-      .button-group.segmented.secondary > li.is-active > a,
-      .button-group.segmented.secondary > li.is-active > a:hover,
-      .button-group.segmented.secondary > li > input:checked + label, .button-group.segmented.secondary > li > input:checked + label:hover {
+      .button-group.segmented.secondary > li.is-active > a, .button-group.segmented.secondary > li.is-active > a:hover,
+      .button-group.segmented.secondary > li > input:checked + label,
+      .button-group.segmented.secondary > li > input:checked + label:hover {
         background: #f1f1f1;
         color: #000; }
       .button-group.segmented.secondary > li.is-active > a .iconic *,
@@ -1466,9 +1459,9 @@ a, [ui-sref], [zf-open], [zf-close], [zf-toggle] {
           .button-group.segmented.success > li > a .iconic *.iconic-property-accent, .button-group.segmented.success > li > label .iconic *.iconic-property-accent, .button-group.segmented.success > li > button .iconic *.iconic-property-accent {
             fill: #43AC6A;
             stroke: #43AC6A; }
-      .button-group.segmented.success > li.is-active > a,
-      .button-group.segmented.success > li.is-active > a:hover,
-      .button-group.segmented.success > li > input:checked + label, .button-group.segmented.success > li > input:checked + label:hover {
+      .button-group.segmented.success > li.is-active > a, .button-group.segmented.success > li.is-active > a:hover,
+      .button-group.segmented.success > li > input:checked + label,
+      .button-group.segmented.success > li > input:checked + label:hover {
         background: #43AC6A;
         color: #fff; }
       .button-group.segmented.success > li.is-active > a .iconic *,
@@ -1493,9 +1486,9 @@ a, [ui-sref], [zf-open], [zf-close], [zf-toggle] {
           .button-group.segmented.warning > li > a .iconic *.iconic-property-accent, .button-group.segmented.warning > li > label .iconic *.iconic-property-accent, .button-group.segmented.warning > li > button .iconic *.iconic-property-accent {
             fill: #F08A24;
             stroke: #F08A24; }
-      .button-group.segmented.warning > li.is-active > a,
-      .button-group.segmented.warning > li.is-active > a:hover,
-      .button-group.segmented.warning > li > input:checked + label, .button-group.segmented.warning > li > input:checked + label:hover {
+      .button-group.segmented.warning > li.is-active > a, .button-group.segmented.warning > li.is-active > a:hover,
+      .button-group.segmented.warning > li > input:checked + label,
+      .button-group.segmented.warning > li > input:checked + label:hover {
         background: #F08A24;
         color: #fff; }
       .button-group.segmented.warning > li.is-active > a .iconic *,
@@ -1520,9 +1513,9 @@ a, [ui-sref], [zf-open], [zf-close], [zf-toggle] {
           .button-group.segmented.alert > li > a .iconic *.iconic-property-accent, .button-group.segmented.alert > li > label .iconic *.iconic-property-accent, .button-group.segmented.alert > li > button .iconic *.iconic-property-accent {
             fill: #F04124;
             stroke: #F04124; }
-      .button-group.segmented.alert > li.is-active > a,
-      .button-group.segmented.alert > li.is-active > a:hover,
-      .button-group.segmented.alert > li > input:checked + label, .button-group.segmented.alert > li > input:checked + label:hover {
+      .button-group.segmented.alert > li.is-active > a, .button-group.segmented.alert > li.is-active > a:hover,
+      .button-group.segmented.alert > li > input:checked + label,
+      .button-group.segmented.alert > li > input:checked + label:hover {
         background: #F04124;
         color: #fff; }
       .button-group.segmented.alert > li.is-active > a .iconic *,
@@ -1741,18 +1734,12 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
 input[type="search"] {
   box-sizing: border-box; }
 
-input.disabled,
-input[disabled],
-input[readonly],
+input.disabled, input[disabled], input[readonly],
 fieldset[disabled] input {
   cursor: not-allowed; }
-  input.disabled,
-  input.disabled:hover,
-  input[disabled],
-  input[disabled]:hover,
-  input[readonly],
-  input[readonly]:hover,
-  fieldset[disabled] input, fieldset[disabled] input:hover {
+  input.disabled, input.disabled:hover, input[disabled], input[disabled]:hover, input[readonly], input[readonly]:hover,
+  fieldset[disabled] input,
+  fieldset[disabled] input:hover {
     background-color: #f2f2f2; }
 
 label {
@@ -2450,7 +2437,6 @@ meter {
   -ms-overflow-style: -ms-autohiding-scrollbar; }
   .small-grid-block.panel {
     -webkit-transform: none;
-        -ms-transform: none;
             transform: none;
     position: relative;
     width: auto;
@@ -2475,7 +2461,6 @@ meter {
           flex: 1 1 auto; }
   .small-grid-content.panel {
     -webkit-transform: none;
-        -ms-transform: none;
             transform: none;
     position: relative;
     width: auto;
@@ -2527,7 +2512,6 @@ meter {
     -ms-overflow-style: -ms-autohiding-scrollbar; }
     .medium-grid-block.panel {
       -webkit-transform: none;
-          -ms-transform: none;
               transform: none;
       position: relative;
       width: auto;
@@ -2553,7 +2537,6 @@ meter {
             flex: 1 1 auto; }
     .medium-grid-content.panel {
       -webkit-transform: none;
-          -ms-transform: none;
               transform: none;
       position: relative;
       width: auto;
@@ -2605,7 +2588,6 @@ meter {
     -ms-overflow-style: -ms-autohiding-scrollbar; }
     .large-grid-block.panel {
       -webkit-transform: none;
-          -ms-transform: none;
               transform: none;
       position: relative;
       width: auto;
@@ -2631,7 +2613,6 @@ meter {
             flex: 1 1 auto; }
     .large-grid-content.panel {
       -webkit-transform: none;
-          -ms-transform: none;
               transform: none;
       position: relative;
       width: auto;
@@ -4459,7 +4440,6 @@ meter {
     right: 1rem;
     top: 50%;
     -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
             transform: translateY(-50%); }
   .menu-bar.label-corner > li {
     position: relative; }
@@ -4738,8 +4718,7 @@ meter {
 /*
     Transitions
   */
-.slideInDown.ng-enter,
-.slideInDown.ng-hide-remove {
+.slideInDown.ng-enter, .slideInDown.ng-hide-remove {
   -webkit-transition-duration: 500ms;
           transition-duration: 500ms;
   -webkit-transition-timing-function: ease;
@@ -4751,17 +4730,13 @@ meter {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   -webkit-transform: translateY(-100%);
-      -ms-transform: translateY(-100%);
           transform: translateY(-100%); }
 
-.slideInDown.ng-enter.ng-enter-active,
-.slideInDown.ng-hide-remove.ng-hide-remove-active {
+.slideInDown.ng-enter.ng-enter-active, .slideInDown.ng-hide-remove.ng-hide-remove-active {
   -webkit-transform: translateX(0) translateY(0);
-      -ms-transform: translateX(0) translateY(0);
           transform: translateX(0) translateY(0); }
 
-.slideInLeft.ng-enter,
-.slideInLeft.ng-hide-remove {
+.slideInLeft.ng-enter, .slideInLeft.ng-hide-remove {
   -webkit-transition-duration: 500ms;
           transition-duration: 500ms;
   -webkit-transition-timing-function: ease;
@@ -4773,17 +4748,13 @@ meter {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   -webkit-transform: translateX(100%);
-      -ms-transform: translateX(100%);
           transform: translateX(100%); }
 
-.slideInLeft.ng-enter.ng-enter-active,
-.slideInLeft.ng-hide-remove.ng-hide-remove-active {
+.slideInLeft.ng-enter.ng-enter-active, .slideInLeft.ng-hide-remove.ng-hide-remove-active {
   -webkit-transform: translateX(0) translateY(0);
-      -ms-transform: translateX(0) translateY(0);
           transform: translateX(0) translateY(0); }
 
-.slideInUp.ng-enter,
-.slideInUp.ng-hide-remove {
+.slideInUp.ng-enter, .slideInUp.ng-hide-remove {
   -webkit-transition-duration: 500ms;
           transition-duration: 500ms;
   -webkit-transition-timing-function: ease;
@@ -4795,17 +4766,13 @@ meter {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   -webkit-transform: translateY(100%);
-      -ms-transform: translateY(100%);
           transform: translateY(100%); }
 
-.slideInUp.ng-enter.ng-enter-active,
-.slideInUp.ng-hide-remove.ng-hide-remove-active {
+.slideInUp.ng-enter.ng-enter-active, .slideInUp.ng-hide-remove.ng-hide-remove-active {
   -webkit-transform: translateX(0) translateY(0);
-      -ms-transform: translateX(0) translateY(0);
           transform: translateX(0) translateY(0); }
 
-.slideInRight.ng-enter,
-.slideInRight.ng-hide-remove {
+.slideInRight.ng-enter, .slideInRight.ng-hide-remove {
   -webkit-transition-duration: 500ms;
           transition-duration: 500ms;
   -webkit-transition-timing-function: ease;
@@ -4817,17 +4784,13 @@ meter {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   -webkit-transform: translateX(-100%);
-      -ms-transform: translateX(-100%);
           transform: translateX(-100%); }
 
-.slideInRight.ng-enter.ng-enter-active,
-.slideInRight.ng-hide-remove.ng-hide-remove-active {
+.slideInRight.ng-enter.ng-enter-active, .slideInRight.ng-hide-remove.ng-hide-remove-active {
   -webkit-transform: translateX(0) translateY(0);
-      -ms-transform: translateX(0) translateY(0);
           transform: translateX(0) translateY(0); }
 
-.slideOutBottom.ng-leave,
-.slideOutBottom.ng-hide-add {
+.slideOutBottom.ng-leave, .slideOutBottom.ng-hide-add {
   -webkit-transition-duration: 500ms;
           transition-duration: 500ms;
   -webkit-transition-timing-function: ease;
@@ -4839,17 +4802,13 @@ meter {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   -webkit-transform: translateX(0) translateY(0);
-      -ms-transform: translateX(0) translateY(0);
           transform: translateX(0) translateY(0); }
 
-.slideOutBottom.ng-leave.ng-leave-active,
-.slideOutBottom.ng-hide-add.ng-hide-add-active {
+.slideOutBottom.ng-leave.ng-leave-active, .slideOutBottom.ng-hide-add.ng-hide-add-active {
   -webkit-transform: translateY(100%);
-      -ms-transform: translateY(100%);
           transform: translateY(100%); }
 
-.slideOutRight.ng-leave,
-.slideOutRight.ng-hide-add {
+.slideOutRight.ng-leave, .slideOutRight.ng-hide-add {
   -webkit-transition-duration: 500ms;
           transition-duration: 500ms;
   -webkit-transition-timing-function: ease;
@@ -4861,17 +4820,13 @@ meter {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   -webkit-transform: translateX(0) translateY(0);
-      -ms-transform: translateX(0) translateY(0);
           transform: translateX(0) translateY(0); }
 
-.slideOutRight.ng-leave.ng-leave-active,
-.slideOutRight.ng-hide-add.ng-hide-add-active {
+.slideOutRight.ng-leave.ng-leave-active, .slideOutRight.ng-hide-add.ng-hide-add-active {
   -webkit-transform: translateX(100%);
-      -ms-transform: translateX(100%);
           transform: translateX(100%); }
 
-.slideOutUp.ng-leave,
-.slideOutUp.ng-hide-add {
+.slideOutUp.ng-leave, .slideOutUp.ng-hide-add {
   -webkit-transition-duration: 500ms;
           transition-duration: 500ms;
   -webkit-transition-timing-function: ease;
@@ -4883,17 +4838,13 @@ meter {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   -webkit-transform: translateX(0) translateY(0);
-      -ms-transform: translateX(0) translateY(0);
           transform: translateX(0) translateY(0); }
 
-.slideOutUp.ng-leave.ng-leave-active,
-.slideOutUp.ng-hide-add.ng-hide-add-active {
+.slideOutUp.ng-leave.ng-leave-active, .slideOutUp.ng-hide-add.ng-hide-add-active {
   -webkit-transform: translateY(-100%);
-      -ms-transform: translateY(-100%);
           transform: translateY(-100%); }
 
-.slideOutLeft.ng-leave,
-.slideOutLeft.ng-hide-add {
+.slideOutLeft.ng-leave, .slideOutLeft.ng-hide-add {
   -webkit-transition-duration: 500ms;
           transition-duration: 500ms;
   -webkit-transition-timing-function: ease;
@@ -4905,17 +4856,13 @@ meter {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   -webkit-transform: translateX(0) translateY(0);
-      -ms-transform: translateX(0) translateY(0);
           transform: translateX(0) translateY(0); }
 
-.slideOutLeft.ng-leave.ng-leave-active,
-.slideOutLeft.ng-hide-add.ng-hide-add-active {
+.slideOutLeft.ng-leave.ng-leave-active, .slideOutLeft.ng-hide-add.ng-hide-add-active {
   -webkit-transform: translateX(-100%);
-      -ms-transform: translateX(-100%);
           transform: translateX(-100%); }
 
-.fadeIn.ng-enter,
-.fadeIn.ng-hide-remove {
+.fadeIn.ng-enter, .fadeIn.ng-hide-remove {
   -webkit-transition-duration: 500ms;
           transition-duration: 500ms;
   -webkit-transition-timing-function: ease;
@@ -4926,12 +4873,10 @@ meter {
           transition-property: opacity;
   opacity: 0; }
 
-.fadeIn.ng-enter.ng-enter-active,
-.fadeIn.ng-hide-remove.ng-hide-remove-active {
+.fadeIn.ng-enter.ng-enter-active, .fadeIn.ng-hide-remove.ng-hide-remove-active {
   opacity: 1; }
 
-.fadeOut.ng-leave,
-.fadeOut.ng-hide-add {
+.fadeOut.ng-leave, .fadeOut.ng-hide-add {
   -webkit-transition-duration: 500ms;
           transition-duration: 500ms;
   -webkit-transition-timing-function: ease;
@@ -4942,12 +4887,10 @@ meter {
           transition-property: opacity;
   opacity: 1; }
 
-.fadeOut.ng-leave.ng-leave-active,
-.fadeOut.ng-hide-add.ng-hide-add-active {
+.fadeOut.ng-leave.ng-leave-active, .fadeOut.ng-hide-add.ng-hide-add-active {
   opacity: 0; }
 
-.hingeInFromTop.ng-enter,
-.hingeInFromTop.ng-hide-remove {
+.hingeInFromTop.ng-enter, .hingeInFromTop.ng-hide-remove {
   -webkit-transition-duration: 500ms;
           transition-duration: 500ms;
   -webkit-transition-timing-function: ease;
@@ -4959,19 +4902,15 @@ meter {
   -webkit-transform: perspective(2000px) rotateX(-90deg);
           transform: perspective(2000px) rotateX(-90deg);
   -webkit-transform-origin: top;
-      -ms-transform-origin: top;
           transform-origin: top;
   opacity: 0; }
 
-.hingeInFromTop.ng-enter.ng-enter-active,
-.hingeInFromTop.ng-hide-remove.ng-hide-remove-active {
+.hingeInFromTop.ng-enter.ng-enter-active, .hingeInFromTop.ng-hide-remove.ng-hide-remove-active {
   -webkit-transform: rotate(0deg);
-      -ms-transform: rotate(0deg);
           transform: rotate(0deg);
   opacity: 1; }
 
-.hingeInFromRight.ng-enter,
-.hingeInFromRight.ng-hide-remove {
+.hingeInFromRight.ng-enter, .hingeInFromRight.ng-hide-remove {
   -webkit-transition-duration: 500ms;
           transition-duration: 500ms;
   -webkit-transition-timing-function: ease;
@@ -4983,19 +4922,15 @@ meter {
   -webkit-transform: perspective(2000px) rotateY(-90deg);
           transform: perspective(2000px) rotateY(-90deg);
   -webkit-transform-origin: right;
-      -ms-transform-origin: right;
           transform-origin: right;
   opacity: 0; }
 
-.hingeInFromRight.ng-enter.ng-enter-active,
-.hingeInFromRight.ng-hide-remove.ng-hide-remove-active {
+.hingeInFromRight.ng-enter.ng-enter-active, .hingeInFromRight.ng-hide-remove.ng-hide-remove-active {
   -webkit-transform: rotate(0deg);
-      -ms-transform: rotate(0deg);
           transform: rotate(0deg);
   opacity: 1; }
 
-.hingeInFromBottom.ng-enter,
-.hingeInFromBottom.ng-hide-remove {
+.hingeInFromBottom.ng-enter, .hingeInFromBottom.ng-hide-remove {
   -webkit-transition-duration: 500ms;
           transition-duration: 500ms;
   -webkit-transition-timing-function: ease;
@@ -5007,19 +4942,15 @@ meter {
   -webkit-transform: perspective(2000px) rotateX(90deg);
           transform: perspective(2000px) rotateX(90deg);
   -webkit-transform-origin: bottom;
-      -ms-transform-origin: bottom;
           transform-origin: bottom;
   opacity: 0; }
 
-.hingeInFromBottom.ng-enter.ng-enter-active,
-.hingeInFromBottom.ng-hide-remove.ng-hide-remove-active {
+.hingeInFromBottom.ng-enter.ng-enter-active, .hingeInFromBottom.ng-hide-remove.ng-hide-remove-active {
   -webkit-transform: rotate(0deg);
-      -ms-transform: rotate(0deg);
           transform: rotate(0deg);
   opacity: 1; }
 
-.hingeInFromLeft.ng-enter,
-.hingeInFromLeft.ng-hide-remove {
+.hingeInFromLeft.ng-enter, .hingeInFromLeft.ng-hide-remove {
   -webkit-transition-duration: 500ms;
           transition-duration: 500ms;
   -webkit-transition-timing-function: ease;
@@ -5031,19 +4962,15 @@ meter {
   -webkit-transform: perspective(2000px) rotateY(90deg);
           transform: perspective(2000px) rotateY(90deg);
   -webkit-transform-origin: left;
-      -ms-transform-origin: left;
           transform-origin: left;
   opacity: 0; }
 
-.hingeInFromLeft.ng-enter.ng-enter-active,
-.hingeInFromLeft.ng-hide-remove.ng-hide-remove-active {
+.hingeInFromLeft.ng-enter.ng-enter-active, .hingeInFromLeft.ng-hide-remove.ng-hide-remove-active {
   -webkit-transform: rotate(0deg);
-      -ms-transform: rotate(0deg);
           transform: rotate(0deg);
   opacity: 1; }
 
-.hingeInFromMiddleX.ng-enter,
-.hingeInFromMiddleX.ng-hide-remove {
+.hingeInFromMiddleX.ng-enter, .hingeInFromMiddleX.ng-hide-remove {
   -webkit-transition-duration: 500ms;
           transition-duration: 500ms;
   -webkit-transition-timing-function: ease;
@@ -5055,19 +4982,15 @@ meter {
   -webkit-transform: perspective(2000px) rotateX(-90deg);
           transform: perspective(2000px) rotateX(-90deg);
   -webkit-transform-origin: center;
-      -ms-transform-origin: center;
           transform-origin: center;
   opacity: 0; }
 
-.hingeInFromMiddleX.ng-enter.ng-enter-active,
-.hingeInFromMiddleX.ng-hide-remove.ng-hide-remove-active {
+.hingeInFromMiddleX.ng-enter.ng-enter-active, .hingeInFromMiddleX.ng-hide-remove.ng-hide-remove-active {
   -webkit-transform: rotate(0deg);
-      -ms-transform: rotate(0deg);
           transform: rotate(0deg);
   opacity: 1; }
 
-.hingeInFromMiddleY.ng-enter,
-.hingeInFromMiddleY.ng-hide-remove {
+.hingeInFromMiddleY.ng-enter, .hingeInFromMiddleY.ng-hide-remove {
   -webkit-transition-duration: 500ms;
           transition-duration: 500ms;
   -webkit-transition-timing-function: ease;
@@ -5079,19 +5002,15 @@ meter {
   -webkit-transform: perspective(2000px) rotateY(-90deg);
           transform: perspective(2000px) rotateY(-90deg);
   -webkit-transform-origin: center;
-      -ms-transform-origin: center;
           transform-origin: center;
   opacity: 0; }
 
-.hingeInFromMiddleY.ng-enter.ng-enter-active,
-.hingeInFromMiddleY.ng-hide-remove.ng-hide-remove-active {
+.hingeInFromMiddleY.ng-enter.ng-enter-active, .hingeInFromMiddleY.ng-hide-remove.ng-hide-remove-active {
   -webkit-transform: rotate(0deg);
-      -ms-transform: rotate(0deg);
           transform: rotate(0deg);
   opacity: 1; }
 
-.hingeOutFromTop.ng-leave,
-.hingeOutFromTop.ng-hide-add {
+.hingeOutFromTop.ng-leave, .hingeOutFromTop.ng-hide-add {
   -webkit-transition-duration: 500ms;
           transition-duration: 500ms;
   -webkit-transition-timing-function: ease;
@@ -5101,21 +5020,17 @@ meter {
   -webkit-transition-property: -webkit-transform, opacity;
           transition-property: transform, opacity;
   -webkit-transform: rotate(0deg);
-      -ms-transform: rotate(0deg);
           transform: rotate(0deg);
   -webkit-transform-origin: top;
-      -ms-transform-origin: top;
           transform-origin: top;
   opacity: 1; }
 
-.hingeOutFromTop.ng-leave.ng-leave-active,
-.hingeOutFromTop.ng-hide-add.ng-hide-add-active {
+.hingeOutFromTop.ng-leave.ng-leave-active, .hingeOutFromTop.ng-hide-add.ng-hide-add-active {
   -webkit-transform: perspective(2000px) rotateX(-90deg);
           transform: perspective(2000px) rotateX(-90deg);
   opacity: 0; }
 
-.hingeOutFromRight.ng-leave,
-.hingeOutFromRight.ng-hide-add {
+.hingeOutFromRight.ng-leave, .hingeOutFromRight.ng-hide-add {
   -webkit-transition-duration: 500ms;
           transition-duration: 500ms;
   -webkit-transition-timing-function: ease;
@@ -5125,21 +5040,17 @@ meter {
   -webkit-transition-property: -webkit-transform, opacity;
           transition-property: transform, opacity;
   -webkit-transform: rotate(0deg);
-      -ms-transform: rotate(0deg);
           transform: rotate(0deg);
   -webkit-transform-origin: right;
-      -ms-transform-origin: right;
           transform-origin: right;
   opacity: 1; }
 
-.hingeOutFromRight.ng-leave.ng-leave-active,
-.hingeOutFromRight.ng-hide-add.ng-hide-add-active {
+.hingeOutFromRight.ng-leave.ng-leave-active, .hingeOutFromRight.ng-hide-add.ng-hide-add-active {
   -webkit-transform: perspective(2000px) rotateY(-90deg);
           transform: perspective(2000px) rotateY(-90deg);
   opacity: 0; }
 
-.hingeOutFromBottom.ng-leave,
-.hingeOutFromBottom.ng-hide-add {
+.hingeOutFromBottom.ng-leave, .hingeOutFromBottom.ng-hide-add {
   -webkit-transition-duration: 500ms;
           transition-duration: 500ms;
   -webkit-transition-timing-function: ease;
@@ -5149,21 +5060,17 @@ meter {
   -webkit-transition-property: -webkit-transform, opacity;
           transition-property: transform, opacity;
   -webkit-transform: rotate(0deg);
-      -ms-transform: rotate(0deg);
           transform: rotate(0deg);
   -webkit-transform-origin: bottom;
-      -ms-transform-origin: bottom;
           transform-origin: bottom;
   opacity: 1; }
 
-.hingeOutFromBottom.ng-leave.ng-leave-active,
-.hingeOutFromBottom.ng-hide-add.ng-hide-add-active {
+.hingeOutFromBottom.ng-leave.ng-leave-active, .hingeOutFromBottom.ng-hide-add.ng-hide-add-active {
   -webkit-transform: perspective(2000px) rotateX(90deg);
           transform: perspective(2000px) rotateX(90deg);
   opacity: 0; }
 
-.hingeOutFromLeft.ng-leave,
-.hingeOutFromLeft.ng-hide-add {
+.hingeOutFromLeft.ng-leave, .hingeOutFromLeft.ng-hide-add {
   -webkit-transition-duration: 500ms;
           transition-duration: 500ms;
   -webkit-transition-timing-function: ease;
@@ -5173,21 +5080,17 @@ meter {
   -webkit-transition-property: -webkit-transform, opacity;
           transition-property: transform, opacity;
   -webkit-transform: rotate(0deg);
-      -ms-transform: rotate(0deg);
           transform: rotate(0deg);
   -webkit-transform-origin: left;
-      -ms-transform-origin: left;
           transform-origin: left;
   opacity: 1; }
 
-.hingeOutFromLeft.ng-leave.ng-leave-active,
-.hingeOutFromLeft.ng-hide-add.ng-hide-add-active {
+.hingeOutFromLeft.ng-leave.ng-leave-active, .hingeOutFromLeft.ng-hide-add.ng-hide-add-active {
   -webkit-transform: perspective(2000px) rotateY(90deg);
           transform: perspective(2000px) rotateY(90deg);
   opacity: 0; }
 
-.hingeOutFromMiddleX.ng-leave,
-.hingeOutFromMiddleX.ng-hide-add {
+.hingeOutFromMiddleX.ng-leave, .hingeOutFromMiddleX.ng-hide-add {
   -webkit-transition-duration: 500ms;
           transition-duration: 500ms;
   -webkit-transition-timing-function: ease;
@@ -5197,21 +5100,17 @@ meter {
   -webkit-transition-property: -webkit-transform, opacity;
           transition-property: transform, opacity;
   -webkit-transform: rotate(0deg);
-      -ms-transform: rotate(0deg);
           transform: rotate(0deg);
   -webkit-transform-origin: center;
-      -ms-transform-origin: center;
           transform-origin: center;
   opacity: 1; }
 
-.hingeOutFromMiddleX.ng-leave.ng-leave-active,
-.hingeOutFromMiddleX.ng-hide-add.ng-hide-add-active {
+.hingeOutFromMiddleX.ng-leave.ng-leave-active, .hingeOutFromMiddleX.ng-hide-add.ng-hide-add-active {
   -webkit-transform: perspective(2000px) rotateX(-90deg);
           transform: perspective(2000px) rotateX(-90deg);
   opacity: 0; }
 
-.hingeOutFromMiddleY.ng-leave,
-.hingeOutFromMiddleY.ng-hide-add {
+.hingeOutFromMiddleY.ng-leave, .hingeOutFromMiddleY.ng-hide-add {
   -webkit-transition-duration: 500ms;
           transition-duration: 500ms;
   -webkit-transition-timing-function: ease;
@@ -5221,21 +5120,17 @@ meter {
   -webkit-transition-property: -webkit-transform, opacity;
           transition-property: transform, opacity;
   -webkit-transform: rotate(0deg);
-      -ms-transform: rotate(0deg);
           transform: rotate(0deg);
   -webkit-transform-origin: center;
-      -ms-transform-origin: center;
           transform-origin: center;
   opacity: 1; }
 
-.hingeOutFromMiddleY.ng-leave.ng-leave-active,
-.hingeOutFromMiddleY.ng-hide-add.ng-hide-add-active {
+.hingeOutFromMiddleY.ng-leave.ng-leave-active, .hingeOutFromMiddleY.ng-hide-add.ng-hide-add-active {
   -webkit-transform: perspective(2000px) rotateY(-90deg);
           transform: perspective(2000px) rotateY(-90deg);
   opacity: 0; }
 
-.zoomIn.ng-enter,
-.zoomIn.ng-hide-remove {
+.zoomIn.ng-enter, .zoomIn.ng-hide-remove {
   -webkit-transition-duration: 500ms;
           transition-duration: 500ms;
   -webkit-transition-timing-function: ease;
@@ -5245,19 +5140,15 @@ meter {
   -webkit-transition-property: -webkit-transform, property;
           transition-property: transform, property;
   -webkit-transform: scale(1.5);
-      -ms-transform: scale(1.5);
           transform: scale(1.5);
   opacity: 0; }
 
-.zoomIn.ng-enter.ng-enter-active,
-.zoomIn.ng-hide-remove.ng-hide-remove-active {
+.zoomIn.ng-enter.ng-enter-active, .zoomIn.ng-hide-remove.ng-hide-remove-active {
   -webkit-transform: scale(1);
-      -ms-transform: scale(1);
           transform: scale(1);
   opacity: 1; }
 
-.zoomOut.ng-leave,
-.zoomOut.ng-hide-add {
+.zoomOut.ng-leave, .zoomOut.ng-hide-add {
   -webkit-transition-duration: 500ms;
           transition-duration: 500ms;
   -webkit-transition-timing-function: ease;
@@ -5267,78 +5158,59 @@ meter {
   -webkit-transition-property: -webkit-transform, property;
           transition-property: transform, property;
   -webkit-transform: scale(0.5);
-      -ms-transform: scale(0.5);
           transform: scale(0.5);
   opacity: 1; }
 
-.zoomOut.ng-leave.ng-leave-active,
-.zoomOut.ng-hide-add.ng-hide-add-active {
+.zoomOut.ng-leave.ng-leave-active, .zoomOut.ng-hide-add.ng-hide-add-active {
   -webkit-transform: scale(1);
-      -ms-transform: scale(1);
           transform: scale(1);
   opacity: 0; }
 
-.spinIn.ng-enter,
-.spinIn.ng-hide-remove {
+.spinIn.ng-enter, .spinIn.ng-hide-remove {
   -webkit-transition-property: -webkit-transform, opacity;
           transition-property: transform, opacity;
   -webkit-transform: rotate(-270deg);
-      -ms-transform: rotate(-270deg);
           transform: rotate(-270deg);
   opacity: 0; }
 
-.spinIn.ng-enter.ng-enter-active,
-.spinIn.ng-hide-remove.ng-hide-remove-active {
+.spinIn.ng-enter.ng-enter-active, .spinIn.ng-hide-remove.ng-hide-remove-active {
   -webkit-transform: rotate(0);
-      -ms-transform: rotate(0);
           transform: rotate(0);
   opacity: 1; }
 
-.spinOut.ng-leave,
-.spinOut.ng-hide-add {
+.spinOut.ng-leave, .spinOut.ng-hide-add {
   -webkit-transition-property: -webkit-transform, opacity;
           transition-property: transform, opacity;
   -webkit-transform: rotate(0);
-      -ms-transform: rotate(0);
           transform: rotate(0);
   opacity: 1; }
 
-.spinOut.ng-leave.ng-leave-active,
-.spinOut.ng-hide-add.ng-hide-add-active {
+.spinOut.ng-leave.ng-leave-active, .spinOut.ng-hide-add.ng-hide-add-active {
   -webkit-transform: rotate(270deg);
-      -ms-transform: rotate(270deg);
           transform: rotate(270deg);
   opacity: 0; }
 
-.spinInCCW.ng-enter,
-.spinInCCW.ng-hide-remove {
+.spinInCCW.ng-enter, .spinInCCW.ng-hide-remove {
   -webkit-transition-property: -webkit-transform, opacity;
           transition-property: transform, opacity;
   -webkit-transform: rotate(270deg);
-      -ms-transform: rotate(270deg);
           transform: rotate(270deg);
   opacity: 0; }
 
-.spinInCCW.ng-enter.ng-enter-active,
-.spinInCCW.ng-hide-remove.ng-hide-remove-active {
+.spinInCCW.ng-enter.ng-enter-active, .spinInCCW.ng-hide-remove.ng-hide-remove-active {
   -webkit-transform: rotate(0);
-      -ms-transform: rotate(0);
           transform: rotate(0);
   opacity: 1; }
 
-.spinOutCCW.ng-leave,
-.spinOutCCW.ng-hide-add {
+.spinOutCCW.ng-leave, .spinOutCCW.ng-hide-add {
   -webkit-transition-property: -webkit-transform, opacity;
           transition-property: transform, opacity;
   -webkit-transform: rotate(0);
-      -ms-transform: rotate(0);
           transform: rotate(0);
   opacity: 1; }
 
-.spinOutCCW.ng-leave.ng-leave-active,
-.spinOutCCW.ng-hide-add.ng-hide-add-active {
+.spinOutCCW.ng-leave.ng-leave-active, .spinOutCCW.ng-hide-add.ng-hide-add-active {
   -webkit-transform: rotate(-270deg);
-      -ms-transform: rotate(-270deg);
           transform: rotate(-270deg);
   opacity: 0; }
 
@@ -5863,11 +5735,9 @@ meter {
   z-index: 2; }
   .is-active.off-canvas {
     -webkit-transform: translate(0, 0) !important;
-        -ms-transform: translate(0, 0) !important;
             transform: translate(0, 0) !important; }
   .off-canvas ~ .grid-frame {
     -webkit-transform: translate(0, 0, 0);
-        -ms-transform: translate(0, 0, 0);
             transform: translate(0, 0, 0);
     -webkit-transition: -webkit-transform 0.25s ease-out;
             transition: transform 0.25s ease-out;
@@ -5891,13 +5761,11 @@ meter {
   left: 0;
   box-shadow: inset -3px 0 10px rgba(0, 0, 0, 0.25);
   -webkit-transform: translateX(-100%);
-      -ms-transform: translateX(-100%);
           transform: translateX(-100%);
   background: #fff;
   color: #000; }
   .off-canvas.is-active ~ .grid-frame {
     -webkit-transform: translateX(250px) !important;
-        -ms-transform: translateX(250px) !important;
             transform: translateX(250px) !important; }
   .off-canvas.top {
     /*
@@ -5914,12 +5782,10 @@ meter {
     top: 0;
     left: 0;
     -webkit-transform: translateY(-100%);
-        -ms-transform: translateY(-100%);
             transform: translateY(-100%);
     box-shadow: inset 0 -3px 10px rgba(0, 0, 0, 0.25); }
     .off-canvas.top.is-active ~ .grid-frame {
       -webkit-transform: translateY(250px) !important;
-          -ms-transform: translateY(250px) !important;
               transform: translateY(250px) !important; }
   .off-canvas.right {
     /*
@@ -5938,11 +5804,9 @@ meter {
     right: 0;
     box-shadow: inset 3px 0 10px rgba(0, 0, 0, 0.25);
     -webkit-transform: translateX(100%);
-        -ms-transform: translateX(100%);
             transform: translateX(100%); }
     .off-canvas.right.is-active ~ .grid-frame {
       -webkit-transform: translateX(-250px) !important;
-          -ms-transform: translateX(-250px) !important;
               transform: translateX(-250px) !important; }
   .off-canvas.bottom {
     /*
@@ -5960,12 +5824,10 @@ meter {
     bottom: 0;
     left: 0;
     -webkit-transform: translateY(100%);
-        -ms-transform: translateY(100%);
             transform: translateY(100%);
     box-shadow: inset 0 3px 10px rgba(0, 0, 0, 0.25); }
     .off-canvas.bottom.is-active ~ .grid-frame {
       -webkit-transform: translateY(-250px) !important;
-          -ms-transform: translateY(-250px) !important;
               transform: translateY(-250px) !important; }
   .off-canvas.left {
     /*
@@ -5983,18 +5845,15 @@ meter {
     left: 0;
     box-shadow: inset -3px 0 10px rgba(0, 0, 0, 0.25);
     -webkit-transform: translateX(-100%);
-        -ms-transform: translateX(-100%);
             transform: translateX(-100%); }
     .off-canvas.left.is-active ~ .grid-frame {
       -webkit-transform: translateX(250px) !important;
-          -ms-transform: translateX(250px) !important;
               transform: translateX(250px) !important; }
   .off-canvas.detached {
     z-index: 0;
     box-shadow: none; }
     .off-canvas.detached, .off-canvas.detached.is-active {
       -webkit-transform: none;
-          -ms-transform: none;
               transform: none; }
     .off-canvas.detached ~ .grid-frame {
       z-index: 1;
@@ -6239,8 +6098,7 @@ a {
   line-height: inherit; }
   a[ui-sref] {
     cursor: pointer; }
-  a:hover,
-  a:focus {
+  a:hover, a:focus {
     color: #004978; }
   a img {
     border: none; }
@@ -6852,48 +6710,26 @@ blockquote p {
     .vertical.grid-block ul li a i {
       color: black; }
 
-.button-auth {
-  font-size: 0.9rem;
-  background: #00558b;
-  color: #fff; }
-  .button-auth .iconic {
-    width: 1em;
-    height: 1em;
-    vertical-align: middle;
-    margin-right: 0.25em;
-    margin-top: -2px; }
-  .button-auth:hover, .button-auth:focus {
-    background: #004876;
-    color: #fff; }
-  .button-auth .iconic * {
-    fill: #fff;
-    stroke: #fff; }
-    .button-auth .iconic *.iconic-property-accent {
-      fill: #fff;
-      stroke: #fff; }
-
 .reveal-modal {
   position: fixed;
   top: 150px !important; }
 
 .fade {
   opacity: 0;
-  -webkit-transition: opacity 0.15s linear;
-  transition: opacity 0.15s linear; }
+  -webkit-transition: opacity .15s linear;
+  transition: opacity .15s linear; }
 
 .fade.in {
   opacity: 1; }
 
 .reveal-modal.fade {
-  -webkit-transition: -webkit-transform 0.3s ease-out;
-  transition: transform 0.3s ease-out;
+  -webkit-transition: -webkit-transform .3s ease-out;
+  transition: transform .3s ease-out;
   -webkit-transform: translate(0, -25%);
-  -ms-transform: translate(0, -25%);
   transform: translate(0, -25%); }
 
 .reveal-modal.in {
   -webkit-transform: translate(0, 0);
-  -ms-transform: translate(0, 0);
   transform: translate(0, 0); }
 
 .reveal-modal-bg.fade {

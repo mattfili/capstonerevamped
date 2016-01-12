@@ -1,12 +1,3 @@
 .button-auth {
 @extend %button;
-	@include button-size {
-		$size: large;
-		$expand: false;
-	}
-	@include button-style {
-		$background: $dark-warning;
-		$background-hover: auto;
-		$color: $body-font-color;
-	}
 }
