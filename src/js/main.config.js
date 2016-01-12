@@ -24,7 +24,7 @@ angular.module('capstone', ['ui.router','foundation', 'foundation.common', 'ngAn
 	        templateUrl: 'assets/details.html'
 	      }, 
 	      'addform': {
-	      	templateUrl: 'assets/addModal.html',
+	      	templateUrl: 'assets/addmodal.html',
 	      	controller: 'addFormController',
 	      	controllerAs: 'addCtrl'
 	      }
